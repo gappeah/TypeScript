@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Validation Page</title>
+</head>
+<body>
+    <h1>Testing Suite</h1>
+    <div class="container">
+        <label for="name">Name:</label>
+        <input type="text" id="name" onblur="validateName1()">
+    </div>
+
+    <div class="container1">
+        <label for="name">Credit Card:</label>
+        <input type="text"  inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number"maxlength="19" placeholder="xxxx xxxx xxxx xxxx" id="Credit" onblur="validateCredit()">
+    </div>
+
+
+    <div class="container2">
+        <label for="email">Email:</label>
+        <input type="text" inputmode="email" placeholder="Enter your email" id="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" onblur="validateEmail()">
+    </div>
+
+
+<div class="container3">
+    <label for="forename">Forename:</label>
+    <input type="text" id="forename" onblur="validateForename()">
+</div>
+<div class="container3">
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" onblur="validateSurname()">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
